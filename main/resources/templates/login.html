@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Dans Design Login Page</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/login.css" th:href="@{/css/login.css}" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css}">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<a class="navbar-brand" href="/" th:href="@{/}">Symphony Used Bikes</a>
+		<button class="navbar-toggler" data-toggle="collapse" data-target = "#navbarMenu">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id = "navbarMenu">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a href="/login" th:href="@{/login}" class="nav-link">Login</a></li>
+				<li class="nav-item"><a href="/secure/insert" th:href="@{/secure/insert}" class="nav-link">Insert</a></li>
+				<li class="nav-item"><a href="/secure/update" th:href="@{/secure/update}" class="nav-link">Update</a></li>
+				<li class="nav-item"><a href="/secure/delete" th:href="@{/secure/delete}" class="nav-link">Delete</a></li>
+			</ul>
+		</div>
+	</nav>
+	<section class="form my-4 mx-5">
+		<div class="container">
+			<div class="row no-gutters">
+				<div class="col-lg-5">
+					<img src="../static/images/bike_parts.jpg" class="img-fluid"
+						th:src="@{/images/bike_parts.jpg}"/>
+				</div>
+				<div class="col-lg-7 px-5 pt-5">
+					<img src="../static/images/logo.png" class="img-fluid py-2 px-3"		
+						th:src="@{/images/logo.png}"/>
+					<h4>Please enter account information</h4>
+					<form method="POST" th:action="@{/login}">
+						<div th:if="${param.error}">
+							<div class="error">Invalid username or password</div>
+						</div>
+						<div th:if="${param.logout}">
+							<div class="error">You have been logged out</div>
+						</div>
+						
+						<div class= "form-row">
+							<div class="col-lg-7">
+								<input type="email" name="username" placeholder="Email Address" class="form-control my-3 p-4"/>
+							</div>
+						</div>
+						<div class= "form-row">
+							<div class="col-lg-7">
+								<input type="password" name="password" placeholder="*****" class="form-control my-3 p-4"/>
+							</div>
+						</div>
+						<div class= "form-row">
+							<div class="col-lg-7">
+								<input type="submit" name="login-submit" value="Login" class="btn1 mt-3 mb-5"/>
+							</div>
+						</div>
+						<p><a href="/" th:href="@{/}">Return Home</a></p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+

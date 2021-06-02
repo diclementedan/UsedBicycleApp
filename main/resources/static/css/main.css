@@ -1,0 +1,18 @@
+/* 
+  Name: Daniel Di Clemente
+  Course: Enterprise Java Development
+  Assignment: Assignment 2
+  Date: October 16, 2020
+*/
+
+h1 {
+	text-align: center;
+	padding: 20px;
+	font-size: 5em;
+}
+
+.main-form {
+	width: 60% auto;
+	margin: 60px auto;
+	padding: 30px;
+}

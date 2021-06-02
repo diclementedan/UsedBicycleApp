@@ -1,0 +1,80 @@
+<!--  
+ Name: Daniel Di Clemente
+ Course: Enterprise Java Development
+ Assignment: Assignment 3
+ Date: November 27, 2020
+ -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Symphony Used Bikes</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css}">
+<link rel="stylesheet" type="text/css" th:href= "@{/css/main.css}" href="/css/main.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<a class="navbar-brand" href="/" th:href="@{/}">Symphony Used Bikes</a>
+		<button class="navbar-toggler" data-toggle="collapse" data-target = "#navbarMenu">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id = "navbarMenu">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a href="/login" th:href="@{/login}" class="nav-link">Login</a></li>
+				<li class="nav-item"><a href="/secure/insert" th:href="@{/secure/insert}" class="nav-link">Insert</a></li>
+				<li class="nav-item"><a href="/secure/update" th:href="@{/secure/update}" class="nav-link">Update</a></li>
+				<li class="nav-item"><a href="/secure/delete" th:href="@{/secure/delete}" class="nav-link">Delete</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div>
+		<h1>Welcome to Symphony Used Bikes!</h1>
+	</div>
+	
+	<div class = "card-deck">
+		<div class = "card">
+			<a href = "/secure/insert">
+ 				<img class = "card-img-top" src = "/images/insert.png" th:src="@{/images/insert.png}" alt = "Insert Icon"> <!--CHANGE IMAGE -->
+			</a>
+	  		<div class = "card-body">
+	    		<h5 class = "">Insert Bike</h5>
+	    		<p class = "card-text">Add a bike to your Symphony Used Bikes Table</p>
+	  		</div>
+		</div>
+		<div class = "card">
+			<a href = "/secure/update">
+	  			<img class = "card-img-top" src = "/images/update.jpg" th:src="@{/images/update.jpg}" alt = "Update Icon"> <!--CHANGE IMAGE -->
+	  		</a>
+	  		<div class = "card-body">
+	    		<h5 class = "">Update Bike</h5>
+	    		<p class = "card-text">Change the information stored for a specific bike in the Symphony Used Bike Table</p>
+	  		</div>
+		</div>
+		<div class = "card">
+			<a href = "/secure/delete">
+	  			<img class = "card-img-top" src = "/images/delete.png" th:src="@{/images/delete.png}" alt = "Delete Icon"> <!--CHANGE IMAGE -->
+	  		</a>
+	  		<div class = "card-body">
+	    		<h5 class = "">Delete Bike</h5>
+	    		<p class = "card-text">Delete a bike from the Symphony Used Bike Table</p>
+	  		</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+</body>
+</html>

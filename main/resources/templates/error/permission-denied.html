@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Permission Denied</title>
+<link rel="stylesheet" type="text/css" media="all"  
+	href="../static/css/login.css" th:href="@{/css/login.css}"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css}">
+</head>
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<a class="navbar-brand" href="/" th:href="@{/}">Symphony Used Bikes</a>
+		<button class="navbar-toggler" data-toggle="collapse" data-target = "#navbarMenu">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id = "navbarMenu">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item"><a href="#" th:href="@{/logout}" class="nav-link">Logout</a></li>
+				<li class="nav-item"><a href="/secure/insert" th:href="@{/secure/insert}" class="nav-link">Insert</a></li>
+				<li class="nav-item"><a href="/secure/update" th:href="@{/secure/update}" class="nav-link">Update</a></li>
+				<li class="nav-item"><a href="/secure/delete" th:href="@{/secure/delete}" class="nav-link">Delete</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="error-page">
+		<h1>Permission Denied!</h1>
+		<p>You are not authorized to access this page, please select one of the following:</p>
+		<p><a href="/" th:href="@{/}">Back to home page</a></p>
+		<p><a href="#" th:href="@{/logout}">Logout</a></p>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+</body>
+</html>
